@@ -49,13 +49,13 @@ mkdir pyradio-sdr && cd pyradio-sdr
 ### 2. Create a virtual environment (recommended)
 
 ```bash
-python3 -m venv venv
+python3 -m venv .venv
 
 # Linux / macOS
-source venv/bin/activate
+source .venv/bin/activate
 
 # Windows
-venv\Scripts\activate
+.venv\Scripts\activate
 ```
 
 ### 3. Install Python dependencies
@@ -99,7 +99,7 @@ Install [Zadig](https://zadig.akeo.ie/) and replace the RTL-SDR driver with WinU
 ## Running
 
 ```bash
-python sdr_radio.py
+python launcher.py
 ```
 
 The application starts in **Simulated SDR** mode by default. Press **▶ Play** to start receiving, and you'll see the spectrum analyzer come alive with the signal visualization.
@@ -125,9 +125,9 @@ The application starts in **Simulated SDR** mode by default. Press **▶ Play** 
 
 ## Windows packaging
 
-This repository now includes a portable one-file EXE build and an installer build.
+This repository now includes a portable folder build and an installer build.
 
-### Build the portable EXE
+### Build the portable release
 
 ```powershell
 .\build_portable.ps1
@@ -135,9 +135,9 @@ This repository now includes a portable one-file EXE build and an installer buil
 
 Output:
 
-- `dist\PyRadioSDR.exe`
+- `dist\PyRadioSDR\` (folder containing `PyRadioSDR.exe`)
 
-The portable build uses **PyInstaller** and bundles the Qt runtime, PortAudio, RTL-SDR native library files, and the application icon.
+The portable build uses **PyInstaller** and bundles the Qt runtime, PortAudio, RTL-SDR native library files, and the application icon into a self-contained directory.
 Packaged builds now start through a lightweight launcher that shows a small splash window while the heavy SDR/DSP modules import.
 
 ### Build the installer
@@ -152,7 +152,7 @@ Primary output:
 
 Installer behavior:
 
-- Installs `PyRadioSDR.exe` into **Program Files\PyRadio SDR**
+- Installs the application into **Program Files\PyRadio SDR**
 - Creates **Desktop** and **Start Menu** shortcuts
 - Uses **Inno Setup** if it is installed
 - Falls back to the built-in Windows **IExpress** packager if Inno Setup is not available
@@ -160,8 +160,8 @@ Installer behavior:
 ### Build-time files
 
 - `requirements-build.txt` — build-only Python dependency list
-- `pyradio_sdr.spec` — PyInstaller spec for the one-file EXE
-- `build_portable.ps1` — portable EXE build script
+- `pyradio_sdr.spec` — PyInstaller spec for the portable build
+- `build_portable.ps1` — portable build script
 - `build_installer.ps1` — installer build script
 - `installer\PyRadioSDR.iss` — Inno Setup script
 - `installer\install_pyradio_sdr.ps1` — install action used by the IExpress fallback
