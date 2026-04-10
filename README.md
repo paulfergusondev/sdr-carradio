@@ -5,6 +5,9 @@ A Python reimplementation of [Guglielmo](https://github.com/marcogrecopriolo/gug
 ![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue)
 ![License: GPL-2.0](https://img.shields.io/badge/license-GPL--2.0-green)
 
+<br>
+<img src="assets/screenshot.png" alt="PyRadio SDR Screenshot" width="80%">
+
 ---
 
 ## Features
