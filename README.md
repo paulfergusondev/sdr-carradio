@@ -19,7 +19,6 @@ A vibe-coded UI for listenign to FM radio via SDR. Inspired by [Guglielmo](https
 | **Stereo indicator** | ✅ Visual |
 | **RDS display** (simulated / real when hardware connected) | ✅ Working |
 | **Spectrum analyzer** (real-time FFT + waterfall) | ✅ Animated |
-| **DAB mode** (channel/service browser) | 🔲 UI complete, backend stub |
 | **8 Station Presets** (save/recall/delete) | ✅ Persistent JSON |
 | **Volume & Squelch knobs** (custom-painted rotary) | ✅ Interactive |
 | **Signal & SNR LED meters** | ✅ Animated bar graphs |
