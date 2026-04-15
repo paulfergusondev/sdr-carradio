@@ -1,6 +1,6 @@
 # PyRadio SDR — Software Defined Radio with Car-Radio UI
 
-A vibe-coded Python reimplementation of [Guglielmo](https://github.com/marcogrecopriolo/guglielmo) (C++/Qt FM & DAB tuner) featuring a stunning **luxury car-radio** inspired UI built entirely in Python with PySide6. 
+A vibe-coded UI for listenign to FM radio via SDR. Inspired by [Guglielmo](https://github.com/marcogrecopriolo/guglielmo) (C++/Qt FM & DAB tuner) featuring a stunning **luxury car-radio** inspired UI built entirely in Python with PySide6. 
 
 ![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue)
 ![License: GPL-2.0](https://img.shields.io/badge/license-GPL--2.0-green)
@@ -114,8 +114,7 @@ The application starts in **Simulated SDR** mode by default. Press **▶ Play** 
 3. **Presets** — Click numbered buttons (1–8) to recall saved stations
 4. **Save preset** — Tune to a frequency, then click **M+**
 5. **Volume** — Drag the VOLUME knob up/down
-6. **Mode** — Switch between FM and DAB with the mode buttons
-7. **Settings** — Click ⚙ to configure device, FM params, audio output
+6. **Settings** — Click ⚙ to configure device, FM params, audio output
 
 ### Using real RTL-SDR hardware
 
@@ -220,14 +219,13 @@ RTL-SDR IQ samples (2.4 MS/s complex)
 | `←` / `→` | Tune down / up (0.1 MHz) |
 | `1`–`8` | Recall preset |
 | `F` | Switch to FM mode |
-| `D` | Switch to DAB mode |
 | `Esc` | Quit |
 
 ---
 
 ## Credits & License
 
-Inspired by [Guglielmo](https://github.com/marcogrecopriolo/guglielmo) by Marco Greco, which is itself based on Qt-DAB and sdr-j-fm by Jan van Katwijk.
+Inspired by [Guglielmo](https://github.com/marcogrecopriolo/guglielmo) by Marco Greco, which is itself based on sdr-j-fm by Jan van Katwijk.
 
 This project is an independent Python reimplementation of the UI and core SDR concepts. No code was directly ported from the C++ original.
 
